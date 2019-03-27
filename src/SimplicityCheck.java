@@ -15,10 +15,8 @@ public class SimplicityCheck {
                 return xxx;
             } else
                 System.out.println("Sorry. Restart the program and try again!");
-            System.exit(0);
         } catch (NumberFormatException e) {
             System.out.println("Sorry. Restart the program and try again!");
-            System.exit(0);
         }
         scanner.close();
         return 0;
