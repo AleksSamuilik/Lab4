@@ -20,31 +20,26 @@ public class SimplicityCheck {
             }
         }
         scanner.close();
-        return 0;
+        return -1;
     }
 
     public static boolean isSimple(int n) {
         int i = 2;
-        int j = 0;
-        while (i * i <= n && j != 1) {
+        while (i * i <= n ) {
             if (n % i == 0) {
-                j = 1;
+                return false;
             }
             i += 1;
         }
-        if (j == 1) {
             return true;
-        } else {
-            return false;
         }
-    }
 
     public static void main(String[] args) {
         int xxx = readUserInput();
         if (isSimple(xxx)){
-            System.out.println("Number: " + xxx + " compound.");
-        }else {
             System.out.println("Number: " + xxx + " simplicity.");
+        }else {
+            System.out.println("Number: " + xxx + " compound.");
         }
     }
 }
